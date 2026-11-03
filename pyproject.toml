@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffilm"
+version = "0.1.0"
+description = "Video replica QC: activity curves, motion window, rhythm energy — pass/fail gates with named causes"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.scripts]
+diffilm = "diffilm.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["diffilm*"]
